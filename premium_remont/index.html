@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Premium Ремонт - премиальный ремонт квартир и домов</title>
+    <meta name="description" content="Лендинг портфолио студии Premium Ремонт: премиальный ремонт квартир, домов и коттеджей под ключ.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <svg class="sprite" aria-hidden="true">
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2.1Z"/>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+        <path d="m9 12 2 2 4-5"/>
+      </symbol>
+      <symbol id="i-file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+        <path d="M14 2v6h6M8 13h8M8 17h6"/>
+      </symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24">
+        <path d="M14.7 6.3a4 4 0 0 0 5 5L10.4 20.6a2.1 2.1 0 0 1-3 0l-4-4a2.1 2.1 0 0 1 0-3l9.3-9.3Z"/>
+        <path d="m8 8 8 8"/>
+      </symbol>
+      <symbol id="i-home" viewBox="0 0 24 24">
+        <path d="m3 11 9-8 9 8"/>
+        <path d="M5 10v10h14V10M10 20v-6h4v6"/>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9Z"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <path d="M12 7v5l3 2"/>
+      </symbol>
+      <symbol id="i-ruler" viewBox="0 0 24 24">
+        <path d="m16 2 6 6L8 22l-6-6Z"/>
+        <path d="m7 15 2 2M10 12l2 2M13 9l2 2M16 6l2 2"/>
+      </symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24">
+        <rect x="4" y="10" width="16" height="11" rx="2"/>
+        <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+      </symbol>
+      <symbol id="i-message" viewBox="0 0 24 24">
+        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4Z"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-4.7 7-11a7 7 0 1 0-14 0c0 6.3 7 11 7 11Z"/>
+        <circle cx="12" cy="10" r="2.4"/>
+      </symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24">
+        <path d="M20 11.6a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.6Z"/>
+        <path d="M9 8.6c.2-.4.5-.5.8-.4h.6c.2 0 .4.1.5.4l.6 1.5c.1.3.1.5-.1.7l-.5.6c.5.9 1.2 1.6 2.1 2.1l.7-.5c.2-.2.4-.2.7-.1l1.5.6c.3.1.4.3.4.6v.6c0 .3-.1.6-.4.8-.6.5-1.6.6-3 .1-2.3-.8-4-2.5-4.8-4.8-.5-1.4-.4-2.4.1-3Z"/>
+      </symbol>
+      <symbol id="i-telegram" viewBox="0 0 24 24">
+        <path d="m21 4-3.4 16.2c-.2.9-.8 1.1-1.5.7l-4.3-3.1-2.1 2c-.2.2-.4.4-.9.4l.3-4.5L17.3 8c.4-.3-.1-.5-.5-.2L6.7 14.2l-4.4-1.4c-.9-.3-.9-.9.2-1.3L19.7 4.9c.8-.3 1.5.2 1.3-.9Z"/>
+      </symbol>
+    </svg>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Premium Ремонт">
+          <span class="brand-mark">P</span>
+          <span class="brand-copy"><strong>Premium</strong><span>Ремонт</span></span>
+        </a>
+
+        <nav class="main-nav" data-nav aria-label="Основная навигация">
+          <a href="#about">О компании</a>
+          <a href="#services">Услуги</a>
+          <a href="#projects">Проекты</a>
+          <a href="#process">Этапы</a>
+          <a href="#prices">Цены</a>
+          <a href="#reviews">Отзывы</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="phone-link" href="tel:+74951288888">
+            <svg class="icon"><use href="#i-phone"></use></svg>
+            <span><strong>+7 (495) 128-88-88</strong><small>Ежедневно с 9:00 до 21:00</small></span>
+          </a>
+          <a class="btn btn-outline btn-small" href="#calculator">Консультация</a>
+          <button class="icon-button menu-toggle" type="button" data-menu-button aria-label="Открыть меню" aria-expanded="false">
+            <svg class="icon"><use href="#i-menu"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Ремонт под ключ в Москве и области</p>
+            <h1 id="hero-title">Ремонт квартир и домов премиум-класса</h1>
+            <p class="hero-text">Создаем спокойные, дорогие и продуманные интерьеры для жизни. Берем на себя проект, закупки, ремонт, контроль качества и сдачу объекта.</p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="#calculator">Получить смету</a>
+              <a class="btn btn-dark" href="https://t.me/" target="_blank" rel="noreferrer">
+                <svg class="icon"><use href="#i-telegram"></use></svg>
+                Написать в Telegram
+              </a>
+            </div>
+            <div class="hero-trust" aria-label="Преимущества">
+              <span><svg class="icon"><use href="#i-file"></use></svg>Работаем по договору</span>
+              <span><svg class="icon"><use href="#i-shield"></use></svg>Фиксированная смета</span>
+              <span><svg class="icon"><use href="#i-clock"></use></svg>Сроки в графике</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-band" id="calculator" aria-labelledby="calc-title">
+        <div class="container">
+          <div class="quote-shell">
+            <div class="quote-main">
+              <div class="section-title compact">
+                <p class="eyebrow">Предварительный расчет</p>
+                <h2 id="calc-title">Рассчитайте стоимость ремонта</h2>
+                <p>Ответьте на несколько вопросов и получите ориентир по бюджету и срокам.</p>
+              </div>
+
+              <form class="calc-form" data-calc-form>
+                <label>
+                  <span>Тип объекта</span>
+                  <select name="object">
+                    <option value="flat">Квартира</option>
+                    <option value="house">Дом</option>
+                    <option value="cottage">Коттедж</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Площадь, м²</span>
+                  <input type="number" name="area" min="20" max="600" value="80">
+                </label>
+                <label>
+                  <span>Уровень ремонта</span>
+                  <select name="package">
+                    <option value="standard">Стандарт</option>
+                    <option value="comfort" selected>Комфорт</option>
+                    <option value="premium">Премиум</option>
+                    <option value="exclusive">Эксклюзив</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+                </label>
+                <button class="btn btn-gold" type="submit">Рассчитать</button>
+              </form>
+
+              <p class="secure-note">
+                <svg class="icon"><use href="#i-lock"></use></svg>
+                Ваши данные защищены
+              </p>
+            </div>
+
+            <aside class="quote-result" aria-live="polite">
+              <span>Предварительная стоимость</span>
+              <strong data-estimate>от 1 440 000 ₽</strong>
+              <small>Срок от <b data-duration>50</b> дней</small>
+              <a href="#contacts">Получить точную смету <svg class="icon"><use href="#i-arrow"></use></svg></a>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare-section" aria-labelledby="compare-title">
+        <h2 class="sr-only" id="compare-title">До и после</h2>
+        <div class="container">
+          <div class="compare compare-static">
+            <figure class="compare-card">
+              <img src="assets/before-room.png" alt="Помещение до ремонта" loading="lazy">
+              <figcaption class="tag">До</figcaption>
+            </figure>
+            <figure class="compare-card">
+              <img src="assets/after-living.png" alt="Гостиная после ремонта" loading="lazy">
+              <figcaption class="tag">После</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section" id="services">
+        <div class="container split-grid">
+          <div class="packages" id="prices">
+            <div class="section-title">
+              <p class="eyebrow">Выберите пакет</p>
+              <h2>Пакеты услуг</h2>
+            </div>
+            <div class="package-grid">
+              <article class="package-card">
+                <h3>Стандарт</h3>
+                <p>Для аккуратного обновления квартиры без сложной перепланировки.</p>
+                <strong>от 12 000 ₽/м²</strong>
+                <ul>
+                  <li>Черновые и чистовые работы</li>
+                  <li>Материалы среднего сегмента</li>
+                  <li>Контроль прораба</li>
+                  <li>Финальная уборка</li>
+                </ul>
+                <a class="btn btn-outline" href="#calculator">Выбрать пакет</a>
+              </article>
+
+              <article class="package-card is-featured">
+                <div class="card-head">
+                  <h3>Комфорт</h3>
+                  <span>Популярно</span>
+                </div>
+                <p>Оптимальный формат под ключ с дизайн-проектом и расширенным контролем.</p>
+                <strong>от 18 000 ₽/м²</strong>
+                <ul>
+                  <li>Все работы под ключ</li>
+                  <li>Дизайн-проект в подарок</li>
+                  <li>Подбор материалов</li>
+                  <li>Еженедельные отчеты</li>
+                  <li>Вывоз мусора</li>
+                </ul>
+                <a class="btn btn-gold" href="#calculator">Выбрать пакет</a>
+              </article>
+
+              <article class="package-card">
+                <h3>Премиум</h3>
+                <p>Для интерьеров с авторским надзором и материалами высокого класса.</p>
+                <strong>от 25 000 ₽/м²</strong>
+                <ul>
+                  <li>Индивидуальный проект</li>
+                  <li>Премиальные материалы</li>
+                  <li>Персональный менеджер</li>
+                  <li>Авторский надзор</li>
+                  <li>Гарантия 5 лет</li>
+                </ul>
+                <a class="btn btn-outline" href="#calculator">Выбрать пакет</a>
+              </article>
+            </div>
+          </div>
+
+          <div class="process-panel" id="process">
+            <div class="section-title center">
+              <p class="eyebrow">Процесс</p>
+              <h2>Этапы работ</h2>
+            </div>
+            <div class="stage-grid">
+              <article>
+                <svg class="icon"><use href="#i-ruler"></use></svg>
+                <strong>01</strong>
+                <h3>Замер</h3>
+                <p>Осматриваем объект и фиксируем пожелания.</p>
+              </article>
+              <article>
+                <svg class="icon"><use href="#i-file"></use></svg>
+                <strong>02</strong>
+                <h3>Смета</h3>
+                <p>Согласуем бюджет, сроки и договор.</p>
+              </article>
+              <article>
+                <svg class="icon"><use href="#i-tool"></use></svg>
+                <strong>03</strong>
+                <h3>Работы</h3>
+                <p>Ведем ремонт по графику и проекту.</p>
+              </article>
+              <article>
+                <svg class="icon"><use href="#i-home"></use></svg>
+                <strong>04</strong>
+                <h3>Сдача</h3>
+                <p>Передаем готовый объект и гарантию.</p>
+              </article>
+            </div>
+            <a class="btn btn-outline" href="#contacts">Обсудить проект</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container about-grid">
+          <article class="photo-banner time-banner">
+            <div class="photo-banner-copy">
+              <h2>Сроки выполнения</h2>
+              <dl>
+                <div><dt>Косметический ремонт</dt><dd>от 30 дней</dd></div>
+                <div><dt>Капитальный ремонт</dt><dd>от 60 дней</dd></div>
+                <div><dt>Дизайнерский ремонт</dt><dd>от 90 дней</dd></div>
+                <div><dt>Ремонт дома под ключ</dt><dd>от 120 дней</dd></div>
+              </dl>
+              <p class="banner-note">Сроки указаны ориентировочно и зависят от площади и сложности работ.</p>
+            </div>
+          </article>
+
+          <article class="photo-banner guarantee-banner">
+            <div class="photo-banner-copy">
+              <h2>Гарантия 5 лет<br>по договору</h2>
+              <p>Мы уверены в качестве своей работы и предоставляем официальную гарантию на все этапы ремонта.</p>
+              <a class="btn btn-outline" href="#contacts">Подробнее о гарантии</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="stats-section" aria-label="Показатели">
+        <div class="container stats-grid">
+          <div><svg class="icon"><use href="#i-star"></use></svg><strong>12+</strong><span>лет на рынке</span></div>
+          <div><svg class="icon"><use href="#i-home"></use></svg><strong>850+</strong><span>объектов сдано</span></div>
+          <div><svg class="icon"><use href="#i-tool"></use></svg><strong>230+</strong><span>мастеров в штате</span></div>
+          <div><svg class="icon"><use href="#i-shield"></use></svg><strong>98%</strong><span>клиентов рекомендуют</span></div>
+          <div><svg class="icon"><use href="#i-clock"></use></svg><strong>5 лет</strong><span>гарантии на работы</span></div>
+        </div>
+      </section>
+
+      <section class="projects-reviews-section">
+        <div class="container projects-reviews-grid">
+          <div class="portfolio-column" id="projects">
+            <div class="section-header">
+              <div class="section-title">
+                <p class="eyebrow">Портфолио</p>
+                <h2>Выполненные проекты</h2>
+              </div>
+              <a href="#contacts">Смотреть все проекты <svg class="icon"><use href="#i-arrow"></use></svg></a>
+            </div>
+            <div class="project-grid project-grid-compact">
+              <article class="project-card">
+                <img src="assets/project-penthouse.png" alt="Премиальная гостиная с кухней и панорамными окнами" loading="lazy">
+                <div><h3>Квартира 120 м²</h3><p>ЖК «Сердце столицы»</p></div>
+              </article>
+              <article class="project-card">
+                <img src="assets/project-office.png" alt="Темный интерьер кабинета с мрамором и подсветкой" loading="lazy">
+                <div><h3>Дом 250 м²</h3><p>Новорижское шоссе</p></div>
+              </article>
+              <article class="project-card">
+                <img src="assets/project-bedroom.png" alt="Спальня в темных тонах с мягкой подсветкой" loading="lazy">
+                <div><h3>Квартира 80 м²</h3><p>ЖК «Прайм Парк»</p></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="portfolio-column" id="reviews">
+            <div class="section-header">
+              <div class="section-title">
+                <p class="eyebrow">Отзывы</p>
+                <h2>Отзывы клиентов</h2>
+              </div>
+              <a href="#contacts">Смотреть все отзывы <svg class="icon"><use href="#i-arrow"></use></svg></a>
+            </div>
+            <div class="reviews-grid reviews-grid-compact">
+            <article class="review-card">
+              <img src="assets/review-marina.png" alt="Марина, клиент Premium Ремонт" loading="lazy">
+              <div>
+                <div class="review-top"><strong>Марина</strong><span>Квартира 86 м²</span></div>
+                <p>Очень понравилось, что команда сразу предложила понятный план и не пропадала в процессе. Получилось дороже типового ремонта, но результат выглядит именно так, как мы хотели.</p>
+                <div class="stars" aria-label="Оценка 5 из 5">
+                  <svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <img src="assets/review-alexey.png" alt="Алексей, клиент Premium Ремонт" loading="lazy">
+              <div>
+                <div class="review-top"><strong>Алексей</strong><span>Дом 240 м²</span></div>
+                <p>Смету зафиксировали до старта, все спорные моменты показывали на фото и видео. Особенно понравилась работа прораба: спокойно, четко, без лишних обещаний.</p>
+                <div class="stars" aria-label="Оценка 5 из 5">
+                  <svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg>
+                </div>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <img src="assets/review-elena.png" alt="Елена, клиент Premium Ремонт" loading="lazy">
+              <div>
+                <div class="review-top"><strong>Елена</strong><span>Апартаменты 72 м²</span></div>
+                <p>Нужен был интерьер в темной премиальной стилистике, но без перегруза. Ребята хорошо поймали вкус, помогли с материалами и аккуратно довели все до финала.</p>
+                <div class="stars" aria-label="Оценка 5 из 5">
+                  <svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg><svg class="icon"><use href="#i-star"></use></svg>
+                </div>
+              </div>
+            </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="messenger-section" aria-labelledby="messenger-title">
+        <div class="messenger-bg" aria-hidden="true"></div>
+        <div class="container messenger-inner">
+          <p class="eyebrow">Быстрая связь</p>
+          <h2 id="messenger-title">Удобно общаться в мессенджерах</h2>
+          <p>Напишите нам в удобный для вас канал, ответим быстро и подробно.</p>
+          <div class="messenger-actions">
+            <a class="messenger-btn whatsapp" href="https://wa.me/74951288888" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#i-whatsapp"></use></svg>
+              <span>Написать<br>в WhatsApp</span>
+            </a>
+            <a class="messenger-btn telegram" href="https://t.me/" target="_blank" rel="noreferrer">
+              <svg class="icon"><use href="#i-telegram"></use></svg>
+              <span>Написать<br>в Telegram</span>
+            </a>
+          </div>
+          <div class="messenger-points" aria-label="Что получите в переписке">
+            <span><svg class="icon"><use href="#i-clock"></use></svg>Быстрый ответ</span>
+            <span><svg class="icon"><use href="#i-message"></use></svg>Консультация специалиста</span>
+            <span><svg class="icon"><use href="#i-file"></use></svg>Расчет стоимости</span>
+            <span><svg class="icon"><use href="#i-lock"></use></svg>Данные защищены</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-title">
+              <p class="eyebrow">FAQ</p>
+              <h2 id="faq-title">Часто задаваемые вопросы</h2>
+            </div>
+            <a href="#contacts">Задать свой вопрос <svg class="icon"><use href="#i-arrow"></use></svg></a>
+          </div>
+          <div class="faq-grid" data-faq>
+            <details>
+              <summary>Сколько стоит ремонт квартиры под ключ?</summary>
+              <p>Стоимость зависит от площади, сложности проекта и уровня материалов. Быстрый ориентир можно получить в калькуляторе выше, точную смету готовим после замера.</p>
+            </details>
+            <details>
+              <summary>Можно ли посмотреть ваши объекты?</summary>
+              <p>Да, по согласованию показываем завершенные и текущие объекты, близкие к вашему формату ремонта.</p>
+            </details>
+            <details>
+              <summary>Вы работаете по договору?</summary>
+              <p>Да, в договоре фиксируем объем работ, сроки, стоимость, гарантию и ответственность сторон.</p>
+            </details>
+            <details>
+              <summary>Кто закупает и доставляет материалы?</summary>
+              <p>Можем взять закупку и логистику на себя или работать с материалами заказчика. Обычно клиенту удобнее передать это нам.</p>
+            </details>
+            <details>
+              <summary>Как происходит оплата?</summary>
+              <p>Оплата разбивается на этапы и привязывается к фактически выполненным работам.</p>
+            </details>
+            <details>
+              <summary>Сколько времени занимает ремонт?</summary>
+              <p>Косметический ремонт занимает от 30 дней, капитальный от 60 дней, дизайнерский от 90 дней. Большие дома рассчитываем индивидуально.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Premium Ремонт">
+            <span class="brand-mark">P</span>
+            <span class="brand-copy"><strong>Premium</strong><span>Ремонт</span></span>
+          </a>
+          <p>Ремонт квартир и домов премиум-класса в Москве и Московской области. Портфолио, смета и консультация в один клик.</p>
+          <div class="socials" aria-label="Социальные сети">
+            <a href="#" aria-label="Instagram">In</a>
+            <a href="#" aria-label="VK">Vk</a>
+            <a href="#" aria-label="YouTube">Yt</a>
+          </div>
+        </div>
+        <div>
+          <h2>Услуги</h2>
+          <a href="#services">Квартиры</a>
+          <a href="#services">Дома и коттеджи</a>
+          <a href="#services">Дизайн-проект</a>
+          <a href="#services">Инженерные работы</a>
+        </div>
+        <div>
+          <h2>Компания</h2>
+          <a href="#about">О компании</a>
+          <a href="#process">Этапы работы</a>
+          <a href="#projects">Проекты</a>
+          <a href="#reviews">Отзывы</a>
+        </div>
+        <address>
+          <h2>Контакты</h2>
+          <a href="tel:+74951288888"><svg class="icon"><use href="#i-phone"></use></svg>+7 (495) 128-88-88</a>
+          <a href="mailto:info@premium-remont.ru">info@premium-remont.ru</a>
+          <span><svg class="icon"><use href="#i-pin"></use></svg>Москва, ул. Лесная, 7, офис 12</span>
+          <a class="btn btn-gold" href="#calculator">Заказать звонок</a>
+        </address>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Premium Ремонт. Все права защищены.</span>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
