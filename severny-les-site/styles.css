@@ -413,6 +413,10 @@ h1 span {
   font-size: 14px;
 }
 
+.hero-cta .play-link[hidden] {
+  display: none;
+}
+
 .play-dot {
   position: relative;
   width: 44px;
@@ -1592,8 +1596,18 @@ cite {
     width: calc(100% - 32px);
   }
 
+  body {
+    font-size: 15px;
+  }
+
+  .site-header {
+    min-height: 76px;
+    gap: 12px;
+  }
+
   .brand {
     min-width: 0;
+    gap: 9px;
   }
 
   .brand-text strong {
@@ -1606,37 +1620,93 @@ cite {
 
   .menu-toggle {
     top: 15px;
-    right: max(16px, calc(100vw - 374px));
+    right: 16px;
+  }
+
+  .main-nav,
+  .header-actions {
+    left: 16px;
+    right: 16px;
+  }
+
+  .main-nav {
+    top: 76px;
+    max-height: calc(100vh - 196px);
+    overflow: auto;
+    padding: 10px;
+  }
+
+  .main-nav a {
+    padding: 12px 10px;
+  }
+
+  .header-actions {
+    top: auto;
+    bottom: 16px;
+    gap: 12px;
+  }
+
+  .header-actions .ghost-button,
+  .phone-link {
+    width: 100%;
+    justify-content: center;
   }
 
   .hero {
-    min-height: 720px;
-    padding-top: 112px;
-    background-position: 58% center;
+    min-height: 760px;
+    padding-top: 146px;
+    background:
+      linear-gradient(90deg, rgba(4, 5, 5, 0.98) 0%, rgba(6, 8, 8, 0.86) 54%, rgba(8, 10, 10, 0.5) 100%),
+      linear-gradient(180deg, rgba(7, 8, 8, 0.1), rgba(7, 8, 8, 0.92)),
+      url("assets/hero.png") 60% center / cover no-repeat,
+      #0a0c0c;
   }
 
   h1 {
     font-size: 37px;
+    line-height: 1.08;
   }
 
   .hero-copy {
-    max-width: 358px;
+    max-width: 100%;
   }
 
   .hero-copy > p {
-    max-width: 350px;
+    max-width: 330px;
+    margin-bottom: 30px;
     font-size: 16px;
   }
 
   .hero-features {
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin-bottom: 34px;
+    gap: 10px;
+    max-width: 330px;
+    margin-bottom: 28px;
+  }
+
+  .feature {
+    min-height: 58px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: rgba(5, 7, 7, 0.54);
+    backdrop-filter: blur(4px);
+  }
+
+  .line-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .line-icon svg {
+    width: 22px;
+    height: 22px;
   }
 
   .hero-cta {
     align-items: stretch;
-    gap: 18px;
+    gap: 14px;
+    max-width: 330px;
   }
 
   .hero-cta .primary-button,
@@ -1656,6 +1726,7 @@ cite {
   .section-heading h2,
   .form-copy h2 {
     font-size: 30px;
+    line-height: 1.14;
   }
 
   .tabs {
@@ -1668,7 +1739,7 @@ cite {
   }
 
   .project-carousel {
-    padding: 0 42px;
+    padding: 0;
   }
 
   .project-card {
@@ -1676,12 +1747,30 @@ cite {
   }
 
   .project-media {
-    height: 210px;
+    height: 220px;
   }
 
   .carousel-arrow {
-    width: 34px;
-    height: 34px;
+    top: 110px;
+    width: 38px;
+    height: 38px;
+    background: rgba(5, 7, 7, 0.84);
+  }
+
+  .carousel-prev {
+    left: 10px;
+  }
+
+  .carousel-next {
+    right: 10px;
+  }
+
+  .row-heading {
+    gap: 16px;
+  }
+
+  .row-heading .text-link {
+    display: none;
   }
 
   .split-grid,
@@ -1706,8 +1795,13 @@ cite {
     padding: 22px;
   }
 
+  .review-form-copy {
+    min-height: auto;
+  }
+
   .package-card {
     min-height: auto;
+    padding: 22px 18px;
   }
 
   .calculator,
@@ -1715,13 +1809,41 @@ cite {
     padding: 20px;
   }
 
+  .range-label {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  output {
+    align-self: flex-start;
+  }
+
+  .total-box {
+    padding: 18px;
+  }
+
+  .total-box strong {
+    font-size: 30px;
+  }
+
   .lead-card,
   .lead-content {
     min-height: 340px;
   }
 
+  .realized-counter {
+    max-width: none;
+    width: 100%;
+  }
+
+  .realized-card img {
+    height: 220px;
+  }
+
   .stage-list {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .stage-list li {
@@ -1743,5 +1865,228 @@ cite {
 
   .estimate-form::after {
     display: none;
+  }
+
+  .trust-features,
+  .stats {
+    gap: 12px;
+  }
+
+  .trust-features div,
+  .stats div {
+    min-height: auto;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .stats div {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-grid {
+    gap: 28px;
+  }
+
+  .footer-grid > div:last-child {
+    align-items: stretch;
+  }
+
+  .messenger-panel {
+    padding: 18px;
+  }
+
+  .site-footer .messengers {
+    width: 100%;
+  }
+
+  .primary-button,
+  .ghost-button {
+    padding-right: 18px;
+    padding-left: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-inner,
+  .site-header {
+    width: calc(100% - 24px);
+  }
+
+  .site-header {
+    min-height: 72px;
+  }
+
+  .brand-text strong {
+    font-size: 13px;
+  }
+
+  .brand-text small {
+    font-size: 8px;
+  }
+
+  .menu-toggle {
+    top: 14px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .main-nav,
+  .header-actions {
+    left: 12px;
+    right: 12px;
+  }
+
+  .main-nav {
+    top: 72px;
+  }
+
+  .hero {
+    min-height: 740px;
+    padding-top: 138px;
+    background-position: 63% center;
+  }
+
+  h1 {
+    margin-bottom: 18px;
+    font-size: 34px;
+  }
+
+  .hero-copy > p {
+    max-width: 292px;
+    margin-bottom: 24px;
+    font-size: 15px;
+  }
+
+  .hero-features,
+  .hero-cta {
+    max-width: 100%;
+  }
+
+  .feature {
+    font-size: 13px;
+  }
+
+  .primary-button,
+  .ghost-button,
+  .tab,
+  .messenger-button {
+    min-width: 0;
+  }
+
+  .primary-button {
+    gap: 12px;
+  }
+
+  .catalog,
+  .split-section,
+  .stages,
+  .realized,
+  .trust {
+    padding-top: 30px;
+    padding-bottom: 34px;
+  }
+
+  .section-heading h2,
+  .form-copy h2 {
+    font-size: 28px;
+  }
+
+  .project-media,
+  .realized-card img {
+    height: 198px;
+  }
+
+  .card-body {
+    min-height: auto;
+    padding: 16px;
+  }
+
+  .specs {
+    line-height: 1.65;
+  }
+
+  .specs span {
+    margin: 0 7px;
+  }
+
+  .split-grid {
+    padding: 36px 0;
+  }
+
+  .calculator,
+  .estimate-form,
+  .review-form,
+  .lead-content {
+    padding: 18px;
+  }
+
+  .total-box strong {
+    font-size: 28px;
+  }
+
+  .lead-card,
+  .lead-content {
+    min-height: 300px;
+  }
+
+  .stage-list li {
+    grid-template-columns: 54px 1fr;
+  }
+
+  .stage-num {
+    width: 54px;
+    height: 54px;
+    font-size: 15px;
+  }
+
+  .trust-features,
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-features p,
+  .stats span {
+    font-size: 11px;
+  }
+
+  .stats strong {
+    font-size: 28px;
+  }
+
+  .footer-grid .brand {
+    max-width: 100%;
+  }
+
+  .footer-grid .messenger-button {
+    min-width: 0;
+    flex: 1 1 130px;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 31px;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero-copy > p {
+    max-width: 270px;
+  }
+
+  .trust-features,
+  .stats,
+  .site-footer .messengers {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer .messengers {
+    display: grid;
   }
 }
