@@ -933,20 +933,43 @@
     }
 
     @media (max-width: 1024px) {
+      body {
+        overflow-x: hidden;
+      }
+
       .shell {
-        width: min(100% - 28px, 720px);
+        width: min(100% - 28px, 560px);
+      }
+
+      .topbar {
+        position: static;
       }
 
       .nav {
         align-items: start;
         flex-direction: column;
-        padding: 14px 0;
+        gap: 12px;
+        padding: 14px 0 12px;
+      }
+
+      .logo-number {
+        font-size: 30px;
+      }
+
+      .logo-word {
+        font-size: 20px;
       }
 
       .menu {
         width: 100%;
         overflow-x: auto;
+        gap: 18px;
         padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+
+      .menu::-webkit-scrollbar {
+        display: none;
       }
 
       .hero {
@@ -990,8 +1013,47 @@
 
       .hero-layout {
         grid-template-columns: 1fr;
-        padding: 54px 0 58px;
-        min-height: min(680px, calc(100svh - 24px));
+        align-items: start;
+        padding: clamp(46px, 10svh, 82px) 0 42px;
+        min-height: clamp(620px, 88svh, 760px);
+      }
+
+      .hero-layout > div {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      .eyebrow {
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.1;
+      }
+
+      h1 {
+        max-width: 10.5em;
+        margin-bottom: 18px;
+        font-size: clamp(34px, 9.8vw, 48px);
+        line-height: 0.98;
+      }
+
+      .lead {
+        max-width: 31ch;
+        margin-bottom: 26px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: min(100%, 340px);
+        gap: 12px;
+      }
+
+      .actions .btn {
+        width: 100%;
+        min-height: 52px;
+        padding: 0 18px;
       }
 
       .hero .trust-strip {
