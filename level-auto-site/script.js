@@ -7,6 +7,7 @@ const openServicesButtons = document.querySelectorAll("[data-open-services]");
 const closeServicesButton = document.querySelector("[data-close-services]");
 const serviceTabs = document.querySelectorAll("[data-service-tab]");
 const servicePanels = document.querySelectorAll("[data-service-panel]");
+const reviewsViewport = document.querySelector(".reviews-viewport");
 const reviewsTrack = document.querySelector("[data-reviews-track]");
 const reviewPrev = document.querySelector("[data-review-prev]");
 const reviewNext = document.querySelector("[data-review-next]");
@@ -164,6 +165,10 @@ function getReviewPageSize() {
   return window.matchMedia("(max-width: 560px)").matches ? 1 : 3;
 }
 
+function isMobileReviewSwipe() {
+  return window.matchMedia("(max-width: 560px)").matches;
+}
+
 function getVisibleReviewCount() {
   if (window.matchMedia("(max-width: 560px)").matches) return 1;
   if (window.matchMedia("(max-width: 820px)").matches) return 2;
@@ -178,6 +183,22 @@ function getReviewGap() {
 
 function moveReviews(withTransition = true) {
   if (!reviewsTrack) return;
+
+  if (isMobileReviewSwipe()) {
+    reviewsTrack.style.transition = "none";
+    reviewsTrack.style.transform = "none";
+
+    if (reviewsViewport && reviewStep) {
+      reviewsViewport.scrollTo({
+        left: reviewIndex * reviewStep,
+        behavior: withTransition ? "smooth" : "auto",
+      });
+    }
+
+    updateReviewDots();
+    return;
+  }
+
   reviewsTrack.style.transition = withTransition ? "transform 280ms ease" : "none";
   reviewsTrack.style.transform = `translateX(-${reviewIndex * reviewStep}px)`;
   updateReviewDots();
@@ -221,8 +242,8 @@ function setupReviews() {
   if (!reviewsTrack || originalReviews.length === 0) return;
 
   reviewPageSize = getReviewPageSize();
+  reviewCloneCount = Math.min(isMobileReviewSwipe() ? 1 : reviewPageSize, originalReviews.length);
   renderReviewDots();
-  reviewCloneCount = Math.min(reviewPageSize, originalReviews.length);
   const prefix = originalReviews.slice(-reviewCloneCount).map((card) => card.cloneNode(true));
   const suffix = originalReviews.slice(0, reviewCloneCount).map((card) => card.cloneNode(true));
 
@@ -239,13 +260,43 @@ function setupReviews() {
 
 function slideReviews(direction) {
   if (!reviewsTrack || isReviewAnimating) return;
+
+  if (isMobileReviewSwipe()) {
+    reviewIndex += direction;
+    moveReviews(true);
+    return;
+  }
+
   isReviewAnimating = true;
   reviewIndex += direction * reviewPageSize;
   moveReviews(true);
 }
 
+function settleMobileReviews() {
+  if (!isMobileReviewSwipe() || !reviewsViewport || !reviewStep || originalReviews.length === 0) return;
+
+  const originalCount = originalReviews.length;
+  reviewIndex = Math.round(reviewsViewport.scrollLeft / reviewStep);
+
+  if (reviewIndex >= originalCount + reviewCloneCount) {
+    reviewIndex = reviewCloneCount;
+    reviewsViewport.scrollTo({ left: reviewIndex * reviewStep, behavior: "auto" });
+  }
+
+  if (reviewIndex < reviewCloneCount) {
+    reviewIndex = originalCount;
+    reviewsViewport.scrollTo({ left: reviewIndex * reviewStep, behavior: "auto" });
+  }
+
+  updateReviewDots();
+}
+
 reviewsTrack?.addEventListener("transitionend", () => {
   if (!reviewsTrack) return;
+  if (isMobileReviewSwipe()) {
+    isReviewAnimating = false;
+    return;
+  }
 
   const originalCount = originalReviews.length;
 
@@ -265,6 +316,18 @@ reviewsTrack?.addEventListener("transitionend", () => {
 
 reviewPrev?.addEventListener("click", () => slideReviews(-1));
 reviewNext?.addEventListener("click", () => slideReviews(1));
+
+let reviewScrollTimer;
+reviewsViewport?.addEventListener(
+  "scroll",
+  () => {
+    if (!isMobileReviewSwipe()) return;
+
+    window.clearTimeout(reviewScrollTimer);
+    reviewScrollTimer = window.setTimeout(settleMobileReviews, 90);
+  },
+  { passive: true }
+);
 
 let resizeTimer;
 window.addEventListener("resize", () => {

@@ -760,7 +760,7 @@ h2 {
 .contacts__panel {
   padding: 32px clamp(30px, 3vw, 52px);
   border-right: 1px solid var(--line);
-  background: rgba(16, 17, 17, 0.5);
+  background: #101111;
 }
 
 .contacts h2 {
@@ -1358,24 +1358,24 @@ h2 {
   }
 
   .hero {
-    min-height: 730px;
+    min-height: 760px;
   }
 
   .hero__content {
-    min-height: 730px;
-    padding-top: 216px;
+    min-height: 760px;
+    padding-top: 164px;
     padding-bottom: 58px;
   }
 
   .hero__media img {
     object-position: 69% center;
-    filter: grayscale(0.04) contrast(1.08) brightness(1.14);
+    filter: grayscale(0.02) contrast(1.08) brightness(1.36);
   }
 
   .hero__shade {
     background:
-      linear-gradient(180deg, rgba(7, 8, 8, 0.84) 0%, rgba(7, 8, 8, 0.62) 38%, rgba(7, 8, 8, 0.28) 100%),
-      linear-gradient(90deg, rgba(7, 8, 8, 0.82), rgba(7, 8, 8, 0.16));
+      linear-gradient(180deg, rgba(7, 8, 8, 0.62) 0%, rgba(7, 8, 8, 0.34) 40%, rgba(7, 8, 8, 0.14) 100%),
+      linear-gradient(90deg, rgba(7, 8, 8, 0.62), rgba(7, 8, 8, 0.06));
   }
 
   h1 {
@@ -1386,7 +1386,7 @@ h2 {
 
   .hero__lead {
     max-width: 312px;
-    margin-top: 17px;
+    margin-top: 126px;
     font-size: 15px;
     line-height: 1.55;
   }
@@ -1485,12 +1485,20 @@ h2 {
   .portfolio-grid {
     grid-template-columns: none;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(260px, 82vw);
+    grid-auto-columns: 100%;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 9%;
+    scroll-behavior: auto;
     scrollbar-width: none;
-    padding: 0 4px 8px;
+    padding: 0 9% 8px;
+  }
+
+  .portfolio-grid.is-line-next,
+  .portfolio-grid.is-line-prev {
+    animation-duration: 150ms;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   .portfolio-grid::-webkit-scrollbar {
@@ -1499,15 +1507,35 @@ h2 {
 
   .work-item {
     scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .reviews-shell {
-    grid-template-columns: 34px minmax(0, 1fr) 34px;
-    gap: 8px;
+    display: block;
+  }
+
+  .reviews-viewport {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .reviews-viewport::-webkit-scrollbar {
+    display: none;
   }
 
   .reviews-track {
     grid-auto-columns: 100%;
+    gap: 10px;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+
+  .review-card {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
   }
 
   .review-dots {
@@ -1521,8 +1549,7 @@ h2 {
   }
 
   .review-nav {
-    width: 34px;
-    height: 64px;
+    display: none;
   }
 
   .service-card {
