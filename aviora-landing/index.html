@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d0d0c" />
+    <meta
+      name="description"
+      content="Aviora — премиальная мебель на заказ: кухни, гардеробные, спальни и интерьерные решения по индивидуальному проекту."
+    />
+    <title>Aviora — мебель на заказ</title>
+    <link rel="stylesheet" href="styles.css?v=3" />
+    <script>document.documentElement.classList.add("js");</script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="Aviora, на главную">
+          <span>Aviora</span>
+          <small>мебель на заказ</small>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#projects">Проекты</a>
+          <a href="#directions">Направления</a>
+          <a href="#materials">Материалы</a>
+          <a href="#process">Процесс</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a class="button button--line header-cta" href="#calculator">Рассчитать стоимость</a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          title="Меню"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden>
+        <a href="#projects">Проекты</a>
+        <a href="#directions">Направления</a>
+        <a href="#materials">Материалы</a>
+        <a href="#process">Процесс</a>
+        <a href="#contacts">Контакты</a>
+        <a class="button button--gold" href="#calculator">Рассчитать стоимость</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-kitchen.webp"
+          alt="Кухня Aviora из темного шпона с каменным островом"
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Премиальная мебель по индивидуальным размерам</p>
+            <h1 id="hero-title">Мебель на заказ <span>для вашего интерьера</span></h1>
+            <p class="hero-lead">
+              Проектируем пространства, в которых эстетика, привычки и архитектура становятся единым целым.
+            </p>
+            <div class="hero-actions">
+              <a class="button button--gold" href="#calculator">Рассчитать стоимость</a>
+              <a class="text-link" href="#projects">
+                <span class="circle-arrow" aria-hidden="true">↓</span>
+                Смотреть проекты
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-facts" aria-label="Ключевые преимущества">
+            <div><strong>12 лет</strong><span>создаем интерьеры</span></div>
+            <div><strong>240+</strong><span>реализованных проектов</span></div>
+            <div><strong>24 месяца</strong><span>гарантия на мебель</span></div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#projects" aria-label="Перейти к проектам">
+          <span></span>
+          Листайте
+        </a>
+      </section>
+
+      <section class="section projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-teaser container" aria-hidden="true">
+          <span>01</span>
+          Избранные интерьеры
+        </div>
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow">Портфолио Aviora</p>
+              <h2 id="projects-title">Пространства с характером</h2>
+            </div>
+            <p>
+              Каждый проект начинается с образа жизни владельца. Мы переводим его в точные пропорции, натуральные фактуры и продуманный свет.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card--feature reveal">
+              <img
+                src="assets/project-kitchen.webp"
+                alt="Черная кухня с подсвеченными витринами и островом"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <div class="project-overlay">
+                <div>
+                  <span>Кухня · 68 м²</span>
+                  <h3>Тихая архитектура</h3>
+                  <p>Шпон ореха, кварцит, матовый металл</p>
+                </div>
+                <button
+                  class="project-open"
+                  type="button"
+                  aria-label="Открыть проект Тихая архитектура"
+                  title="Открыть проект"
+                  data-project
+                  data-image="assets/project-kitchen.webp"
+                  data-title="Тихая архитектура"
+                  data-meta="Кухня · шпон ореха, кварцит, матовый металл"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img
+                src="assets/project-wardrobe.webp"
+                alt="Гардеробная из темного дерева с теплой подсветкой"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <div class="project-overlay">
+                <div>
+                  <span>Гардеробная · 32 м²</span>
+                  <h3>Личный бутик</h3>
+                </div>
+                <button
+                  class="project-open"
+                  type="button"
+                  aria-label="Открыть проект Личный бутик"
+                  title="Открыть проект"
+                  data-project
+                  data-image="assets/project-wardrobe.webp"
+                  data-title="Личный бутик"
+                  data-meta="Гардеробная · темный дуб, стекло, латунь"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img
+                src="assets/project-bedroom.webp"
+                alt="Спальня в темном дереве с мягкими панелями"
+                width="1448"
+                height="1086"
+                loading="lazy"
+              />
+              <div class="project-overlay">
+                <div>
+                  <span>Спальня · 41 м²</span>
+                  <h3>Глубина тишины</h3>
+                </div>
+                <button
+                  class="project-open"
+                  type="button"
+                  aria-label="Открыть проект Глубина тишины"
+                  title="Открыть проект"
+                  data-project
+                  data-image="assets/project-bedroom.webp"
+                  data-title="Глубина тишины"
+                  data-meta="Спальня · стеновые панели, текстиль, натуральный дуб"
+                >
+                  ↗
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="directions" id="directions" aria-labelledby="directions-title">
+        <div class="container directions-inner">
+          <div class="directions-title reveal">
+            <p class="eyebrow">От одной детали до целого пространства</p>
+            <h2 id="directions-title">Мебель для любых комнат</h2>
+          </div>
+
+          <div class="direction-list">
+            <article class="direction-item reveal">
+              <span>01</span>
+              <h3>Кухни</h3>
+              <p>Эргономичные системы, встроенная техника и выразительные материалы.</p>
+            </article>
+            <article class="direction-item reveal">
+              <span>02</span>
+              <h3>Гардеробные</h3>
+              <p>Хранение, спроектированное вокруг вашего ритма и коллекции.</p>
+            </article>
+            <article class="direction-item reveal">
+              <span>03</span>
+              <h3>Спальни</h3>
+              <p>Кровати, панели и тумбы, собранные в спокойную композицию.</p>
+            </article>
+            <article class="direction-item reveal">
+              <span>04</span>
+              <h3>Гостиные</h3>
+              <p>ТВ-зоны, библиотеки и системы хранения для повседневной жизни.</p>
+            </article>
+            <article class="direction-item reveal">
+              <span>05</span>
+              <h3>Коммерческие</h3>
+              <p>Мебель для офисов, бутиков, ресторанов и общественных интерьеров.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="materials" id="materials" aria-labelledby="materials-title">
+        <div class="materials-media reveal">
+          <img
+            src="assets/materials.webp"
+            alt="Образцы темного шпона, камня, металла и рифленых панелей"
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <span class="image-index">05 / Материалы</span>
+        </div>
+
+        <div class="materials-copy reveal">
+          <p class="eyebrow">Тактильность — часть проекта</p>
+          <h2 id="materials-title">Материалы, которые красиво живут</h2>
+          <p>
+            Натуральный шпон, камень, стекло и металл мы подбираем не по отдельности, а как единую палитру. Учитываем свет, прикосновения и то, как поверхность изменится со временем.
+          </p>
+          <ul class="material-list">
+            <li><span>01</span>Натуральный шпон</li>
+            <li><span>02</span>Кварцит и мрамор</li>
+            <li><span>03</span>Стекло и металл</li>
+            <li><span>04</span>Премиальная фурнитура</li>
+          </ul>
+          <a class="button button--line" href="#contacts">Подобрать материалы</a>
+        </div>
+      </section>
+
+      <section class="section process" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <div class="process-heading reveal">
+            <p class="eyebrow">Понятный путь от идеи до монтажа</p>
+            <h2 id="process-title">Производство на заказ — четкие сроки</h2>
+          </div>
+
+          <div class="process-track">
+            <article class="process-step reveal">
+              <span class="step-number">01</span>
+              <h3>Консультация</h3>
+              <p>Знакомимся, обсуждаем задачи, бюджет и архитектуру пространства.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-number">02</span>
+              <h3>Проектирование</h3>
+              <p>Делаем замер, создаем 3D-проект и согласуем каждую деталь.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-number">03</span>
+              <h3>Производство</h3>
+              <p>Изготавливаем мебель и контролируем качество на каждом этапе.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-number">04</span>
+              <h3>Доставка</h3>
+              <p>Бережно привозим изделия в согласованное с вами время.</p>
+            </article>
+            <article class="process-step reveal">
+              <span class="step-number">05</span>
+              <h3>Монтаж</h3>
+              <p>Собираем, устанавливаем и передаем полностью готовый интерьер.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="delivery" aria-labelledby="delivery-title">
+        <div class="delivery-copy reveal">
+          <p class="eyebrow">Собственная служба доставки</p>
+          <h2 id="delivery-title">Берем заботы на себя</h2>
+          <p>
+            Команда Aviora отвечает за результат целиком: от упаковки деталей до финальной регулировки фасадов на объекте.
+          </p>
+          <ul class="check-list">
+            <li>Доставка точно в согласованные сроки</li>
+            <li>Подъем и бережный занос</li>
+            <li>Профессиональная сборка</li>
+            <li>Уборка после установки</li>
+          </ul>
+          <div class="guarantee">
+            <span class="guarantee-number">24</span>
+            <div><strong>месяца гарантии</strong><p>на мебель и фурнитуру</p></div>
+          </div>
+        </div>
+
+        <div class="delivery-media reveal">
+          <img
+            src="assets/delivery.webp"
+            alt="Фирменная служба Aviora доставляет мебель в жилой комплекс"
+            width="1672"
+            height="941"
+            loading="lazy"
+          />
+          <span class="image-index">06 / Доставка</span>
+        </div>
+      </section>
+
+      <section class="section calculator" id="calculator" aria-labelledby="calculator-title">
+        <div class="container calculator-layout">
+          <div class="calculator-main reveal">
+            <p class="eyebrow">Предварительный расчет</p>
+            <h2 id="calculator-title">Узнайте ориентир стоимости</h2>
+            <p class="calculator-intro">
+              Выберите основные параметры. После замера дизайнер подготовит точную смету и несколько вариантов комплектации.
+            </p>
+
+            <form class="calculator-form" id="calculator-form">
+              <label class="select-control">
+                <span>Тип мебели</span>
+                <select id="furniture-type" name="type">
+                  <option value="486000">Кухня</option>
+                  <option value="360000">Гардеробная</option>
+                  <option value="290000">Шкаф</option>
+                  <option value="410000">Спальня</option>
+                  <option value="520000">Гостиная</option>
+                </select>
+              </label>
+
+              <label class="select-control">
+                <span>Основной материал</span>
+                <select id="material" name="material">
+                  <option value="1">Шпон ореха</option>
+                  <option value="1.12">Дуб</option>
+                  <option value="1.24">Эмаль</option>
+                  <option value="1.36">Камень и шпон</option>
+                </select>
+              </label>
+
+              <label class="select-control">
+                <span>Размер проекта</span>
+                <select id="project-size" name="size">
+                  <option value="0.78">До 4 м</option>
+                  <option value="1" selected>5–6 м</option>
+                  <option value="1.24">7–9 м</option>
+                  <option value="1.48">Более 9 м</option>
+                </select>
+              </label>
+
+              <label class="select-control">
+                <span>Комплектация</span>
+                <select id="finish" name="finish">
+                  <option value="1">Премиум</option>
+                  <option value="1.18">Премиум+</option>
+                  <option value="1.34">Коллекционная</option>
+                </select>
+              </label>
+
+              <button class="button button--gold" type="submit">Рассчитать</button>
+            </form>
+            <p class="calculator-note">Расчет предварительный и не является публичной офертой.</p>
+          </div>
+
+          <aside class="price-panel reveal" aria-live="polite">
+            <span>Ориентировочная стоимость</span>
+            <p>от <strong id="price-value">486 000</strong> ₽</p>
+            <ul>
+              <li>Бесплатный замер</li>
+              <li>3D-визуализация проекта</li>
+              <li>Персональный дизайнер</li>
+            </ul>
+            <a class="text-link" href="#contacts">Обсудить проект <span aria-hidden="true">→</span></a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="contact" id="contacts" aria-labelledby="contact-title">
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow">Начнем с разговора</p>
+            <h2 id="contact-title">Расскажите о вашем проекте</h2>
+            <p>Оставьте контакты — дизайнер свяжется с вами, уточнит задачу и предложит следующий шаг.</p>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form">
+            <label>
+              <span>Ваше имя</span>
+              <input type="text" name="name" placeholder="Иван" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel" required />
+            </label>
+            <label class="select-control">
+              <span>Удобное время</span>
+              <select name="time">
+                <option>Любое время</option>
+                <option>09:00–12:00</option>
+                <option>12:00–16:00</option>
+                <option>16:00–20:00</option>
+              </select>
+            </label>
+            <button class="button button--gold" type="submit">Отправить заявку</button>
+            <label class="consent">
+              <input type="checkbox" required checked />
+              <span>Согласен с политикой конфиденциальности</span>
+            </label>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="logo" href="#top" aria-label="Aviora, наверх">
+          <span>Aviora</span>
+          <small>мебель на заказ</small>
+        </a>
+        <p>Москва, ул. Ленина, 48<br /><span>шоурум по предварительной записи</span></p>
+        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+        <a href="mailto:info@aviora.ru">info@aviora.ru</a>
+        <div class="social-links" aria-label="Социальные сети">
+          <a href="#contacts">Instagram</a>
+          <a href="#contacts">Telegram</a>
+          <a href="#contacts">WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="project-dialog" id="project-dialog">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Закрыть" title="Закрыть">×</button>
+      <img id="dialog-image" src="assets/project-kitchen.webp" alt="" />
+      <div class="dialog-caption">
+        <span id="dialog-meta"></span>
+        <h2 id="dialog-title"></h2>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <strong>Заявка отправлена</strong>
+      <span>Дизайнер свяжется с вами в ближайшее время.</span>
+    </div>
+  </body>
+</html>
